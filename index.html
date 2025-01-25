@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Libre+Baskerville:wght@700&family=Oswald&family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Weather App Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Weather Forecast</h1>
+            <p>Get real-time weather updates for any city!</p>
+        </header>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" placeholder="Enter city name..." id="searchinput" />
+                <button id="searchbox" class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Weather Display Section -->
+        <div class="weather-info" id="body_data">
+            <div class="weather-icon">
+                <img src="default.png" alt="Weather Icon" id="body_img" />
+            </div>
+            <div class="weather-details">
+                <h2 id="temp">--°C</h2>
+                <h3 id="city">City Name</h3>
+            </div>
+        </div>
+
+        <!-- Additional Details Section -->
+        <div class="details-section" id="deatil">
+            <div class="detail-item">
+                <i class="fa-solid fa-droplet"></i>
+                <div class="detail-text">
+                    <h5 id="humidity">--%</h5>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="detail-item">
+                <i class="fa-solid fa-wind"></i>
+                <div class="detail-text">
+                    <h5 id="windspeed">-- km/h</h5>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message" id="error">City not found. Please try again.</div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
